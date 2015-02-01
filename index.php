@@ -342,7 +342,7 @@
 			<div class="push"></div>
 		</div>
 		<div id="footer">
-			<p>♥ From <a href="http://imenwall.com/" target="_blank">Imenwall</a> with <a href="https://github.com/shjalayeri" target="_blank">1337ness</a> and </p>
+			<p>♥ with <a href="https://github.com/shjalayeri" target="_blank">1337ness</a> and </p>
 		</div>
     <script type="text/javascript">
         $(function () {
