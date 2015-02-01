@@ -1,0 +1,95 @@
+@font-face {
+	font-family:Droid-Naskh;
+	font-style:normal;
+	font-weight:400;
+	src:url(../fonts/DroidNaskh-Regular.woff) format('woff')
+}
+*{
+	margin: 0;
+	direction: rtl;
+	font-family:Droid-Naskh,Roboto,sans-serif;
+}
+html, body {
+	height: 100%;
+}
+.wrapper{
+	overflow:hidden;
+	clear: both;
+	min-height: 100%;
+	height: auto !important;
+	margin: 0 auto -4em;
+	height: 100%;
+}
+form{
+	background-color: #F1F1F1;
+	border-color: #CCCCCC;
+	border-radius: 8px 8px 8px 8px;
+	border-style: solid;
+	border-width: 1px;
+	padding: 20px;
+	margin:auto;
+	height: auto !important;
+	width:50%;
+}
+textarea{
+	margin: auto;
+    width:100%;
+	resize: none;
+}
+.secret{
+	margin: auto;
+	width:100%;
+}
+.button{
+	float: left;
+}
+textarea{
+	background-color: #FFFF;
+}
+h3{
+	text-align:center;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+.push{
+	height: 5em;
+}
+#footer{
+	position:left;
+	height: 4em;
+	background-color: #F1F1F1;
+}
+p{
+	text-align:center;
+	padding-left: 30px;
+	padding-top: 25px;
+	font-family:tahoma;
+	font-size:12px;
+}
+
+p.info {
+	text-align: justify;
+	font-size:15px;
+	font-family:Droid-Naskh,Roboto,sans-serif;
+}
+
+a:link {
+    color:#000000;
+    background-color:transparent;
+    text-decoration:none;
+}
+a:visited {
+    color:#000000;
+    background-color:transparent;
+    text-decoration:none;
+}
+a:hover {
+    color:#000000;
+    background-color:transparent;
+    text-decoration:underline;
+}
+a:active {
+    color:#000000;
+    background-color:transparent;
+    text-decoration:underline;
+}
