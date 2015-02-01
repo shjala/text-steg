@@ -1,5 +1,6 @@
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <?php
+
     /* 
     Lalevoo -- A Tool for Text Steganography In Farsi Language
     Coded By Shahriyar Jalayeri
