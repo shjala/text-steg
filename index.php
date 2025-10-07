@@ -2,7 +2,7 @@
 <?php
 
     /* 
-    Lalevoo -- A Tool for Text Steganography In Farsi Language
+    A Tool for Simple Text Steganography In Farsi/Arabic Language
     Coded By Shahriyar Jalayeri
     */
     
@@ -278,7 +278,7 @@
     
     if (!empty($_POST['covert_text']) && !empty($_POST['secret_text']) && !empty($_POST['embeded_text']))
     {
-        $final_text =  "خطا: شما در هر مرحله تنها میتوانید رمزگشایی و یا رمزنگاری کنید!";
+        $final_text =  "خطا: شما در هر مرحله تنها میتوانید آشکارنمایی و یا پنهان‌نگاری کنید!";
     }
     elseif (!empty($_POST['covert_text']) && !empty($_POST['secret_text']) )
     {
@@ -290,11 +290,11 @@
         
         if(is_valid_str($secret_text_normal) == false )
         {
-            $final_covert_text = "خطا: متن شما کاراکتر هایی داره که غیر قابل مخفی سازی هستند! کاراکتر های قابل مخفی سازی شامل الفبای فارسی، اسپِیس، اعداد، ویرگول، نقطه، علامت تعجب و علامت سوال میشه.";
+            $final_covert_text = "خطا: متن شما کاراکتر هایی داره که غیر قابل پنهان‌نگاری هستند! کاراکتر های قابل پنهان‌نگاری شامل الفبای فارسی، اسپِیس، اعداد، ویرگول، نقطه، علامت تعجب و علامت سوال میشود.";
         }
         else if ($secret_text_bit_size > $covert_capability )
         {
-            $final_covert_text =  "خطا: متن شما تنها توانایی مخفی کردن $covert_capability بیت رو داره، در صورتی که متن محرمانه $secret_text_bit_size بیته!";
+            $final_covert_text =  "خطا: متن شما تنها توانایی پنهان‌نگاری $covert_capability بیت رو داره، در صورتی که متن محرمانه $secret_text_bit_size بیته!";
         }
         else
         {
@@ -308,7 +308,7 @@
 ?>
 <html>
 	<head>
-		<title>مخفی کن!(بتا)</title>
+		<title>پنهان‌نگاری در متن</title>
 		<link href="css/style.css" media="all" rel="stylesheet">
 		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="js/jquery.farsiInput.js"></script>
@@ -319,9 +319,9 @@
 			- Snake ;)
 		-->
 		<div class="wrapper">
-			<h3>Lalevoo، مخفی کننده اسرار شما! (بتا)</h3>
+			<h3>پنهان‌نگاری در متن</h3>
 			<form action="" method="post">
-                <p class="info">توضیحات : از Lalevoo میتوان جهت مخفی سازی یک پیام محرمانه درون یک پیام پوششی دیگر بهره جست. پیام پوششی میتواند یک قطعه شعر، بخشی از یک خبر و یا هر متن دیگری که توجه کسی را جلب نمیکند، باشد. جهت استفاده، متن پوشش را در بخش "متن پوشش" نگاشته و سپس پیام محرمانه را در بخش "پیام محرمانه" بنگارید. سپس خروجی را برای آلیس ارسال کنید. برای دریافت پیام محرمانه درون متن پوشش، آلیس میتواند آن را در قسمت "متن حاوی پیام محرمانه" قرار داده و پیام محرمانه را دریافت کند.<br/><center><b>توجه، Lalevoo در حال حاضر تنها از زبان فارسی پشتیبانی میکند!</center></b></p>
+                <p class="info">توضیحات : از این ابزار میتوان جهت مخفی سازی یک پیام محرمانه درون یک پیام پوششی دیگر بهره جست. پیام پوششی میتواند یک قطعه شعر، بخشی از یک خبر و یا هر متن دیگری که توجه کسی را جلب نمیکند، باشد. جهت استفاده، متن پوشش را در بخش "متن پوشش" نگاشته و سپس پیام محرمانه را در بخش "پیام محرمانه" بنگارید. سپس خروجی را برای آلیس ارسال کنید. برای دریافت پیام محرمانه درون متن پوشش، آلیس میتواند آن را در قسمت "متن حاوی پیام محرمانه" قرار داده و پیام محرمانه را دریافت کند.<br/><center><b>توجه، این ابزار در حال حاضر تنها از زبان فارسی پشتیبانی میکند!</center></b></p>
 				<br />
                 <h4>متن پوشش (ورودی):</h4>
 				<textarea id="covert_text" type="text" class="covertText" name="covert_text" ></textarea>
@@ -332,7 +332,7 @@
                 <h4>متن خروجی:</h4>
 				<textarea type="text" id="encoded_text" class="covertText" readonly ><?php if(isset($final_covert_text)) echo $final_covert_text; ?></textarea><br><br>
 				
-				<input class="button" type="submit" alt="Submit" value="رمزنگاری"></input>
+				<input class="button" type="submit" alt="Submit" value="پنهان‌نگاری"></input>
                 <input class="button" type="button" onclick="randomText()" value="متن تصادفی"></input>
                 <br>
 				<br /><br />
@@ -343,12 +343,12 @@
 				
 				<h4>پيام محرمانه (خروجی):</h4>
 				<textarea type="text" class="covertText" readonly><?php if(isset($final_secret_text)) echo $final_secret_text; ?></textarea><br><br>
-                <input class="button" type="submit" alt="Submit" value="رمزگشایی"></input><br>
+                <input class="button" type="submit" alt="Submit" value="آشکارسازی"></input><br>
 			</form>
 			<div class="push"></div>
 		</div>
 		<div id="footer">
-			<p>♥ with <a href="https://github.com/shjalayeri" target="_blank">1337ness</a> and </p>
+			<p>♥ with <a href="https://github.com/shjala/text-steg" target="_blank">1337ness</a> and </p>
 		</div>
     <script type="text/javascript">
         $(function () {
